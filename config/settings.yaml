@@ -1,0 +1,30 @@
+# Log Analyzer General Settings
+app:
+  name: "Automated Log Analysis System"
+  version: "0.1.0"
+
+ingestion:
+  supported_extensions:
+    - ".jsonl"
+    - ".log"
+    - ".txt"
+  max_line_length: 65536
+  encoding: "utf-8"
+
+reporting:
+  output_dir: "./reports"
+  default_formats:
+    - "summary"
+    - "csv"
+    - "xlsx"
+
+redaction:
+  enabled: true
+  mask: "[REDACTED]"
+  patterns:
+    - name: "bearer_token"
+      pattern: '(?i)(bearer\s+[a-zA-Z0-9_\-\.]{15,})'
+    - name: "password_field"
+      pattern: '(?i)(password["\']?\s*[:=]\s*["\'])([^"\']+)(["\'])'
+    - name: "api_key"
+      pattern: '(?i)(api[_-]?key["\']?\s*[:=]\s*["\'])([a-zA-Z0-9_\-]{16,})(["\'])'

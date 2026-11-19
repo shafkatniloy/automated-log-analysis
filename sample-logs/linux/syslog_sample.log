@@ -1,0 +1,7 @@
+2026-11-01T08:50:10.123456+00:00 srv-app-01 systemd[1]: Started Daily log rotation.
+2026-11-01T08:51:00.654321+00:00 srv-app-01 dockerd[1240]: level=info msg="Container started id=c3d9a18"
+2026-11-01T08:52:15.987654+00:00 srv-app-01 kernel: [ 4512.981240] EXT4-fs (sda1): re-mounted. Opts: errors=remount-ro
+2026-11-01T08:53:22.112233+00:00 srv-app-01 systemd[1]: payment-api.service: Main process exited, code=exited, status=1/FAILURE
+2026-11-01T08:53:22.113344+00:00 srv-app-01 systemd[1]: payment-api.service: Failed with result 'exit-code'.
+2026-11-01T08:55:00.000000+00:00 srv-app-01 CRON[18902]: (root) CMD (/usr/local/bin/backup-sync.sh)
+2026-11-01T08:56:40.445566+00:00 srv-app-01 monitoring-agent[2100]: disk space warning: /var partition disk usage above 92%

@@ -1,0 +1,7 @@
+2026-11-01 09:05:00 INFO  [inventory-api] Service started on port 8080
+2026-11-01 09:06:10 WARN  [inventory-api] Response time above threshold: 1800ms
+2026-11-01 09:07:20 ERROR [inventory-api] Database connection timeout: host db-replica-01 unreachable
+2026-11-01 09:08:30 CRITICAL [inventory-api] Database connection pool exhausted: active_connections=50 max=50
+2026-11-01 09:09:00 ERROR [inventory-api] Unhandled exception occurred in /api/v1/stock/reserve
+MALFORMED LINE: Missing timestamp and brackets completely corrupted entry
+2026-11-01 09:10:00 INFO  [inventory-api] Periodic cache flush completed

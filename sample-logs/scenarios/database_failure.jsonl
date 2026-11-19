@@ -1,0 +1,7 @@
+{"timestamp":"2026-11-01T14:00:00Z","level":"INFO","service":"payment-api","event":"request_completed","message":"Payment health check OK","status_code":200}
+{"timestamp":"2026-11-01T14:01:05Z","level":"ERROR","service":"payment-api","event":"database_connection_failed","message":"Could not connect to database: timeout connecting to pg-primary:5432","request_id":"req-101"}
+{"timestamp":"2026-11-01T14:01:45Z","level":"ERROR","service":"payment-api","event":"database_connection_failed","message":"Database connection failed: driver connection refused","request_id":"req-102"}
+{"timestamp":"2026-11-01T14:02:10Z","level":"ERROR","service":"payment-api","event":"database_connection_failed","message":"Could not connect to database: pool exhausted (active=50 max=50)","request_id":"req-103"}
+{"timestamp":"2026-11-01T14:02:30Z","level":"ERROR","service":"payment-api","event":"database_connection_failed","message":"Database connection failed: host unreachable","request_id":"req-104"}
+{"timestamp":"2026-11-01T14:03:00Z","level":"CRITICAL","service":"payment-api","event":"service_failure","message":"Payment-api circuit breaker tripped: database unavailable","request_id":"req-105"}
+{"timestamp":"2026-11-01T14:04:15Z","level":"ERROR","service":"order-service","event":"database_connection_failed","message":"Database connection failed: shared database cluster not responding","request_id":"req-106"}

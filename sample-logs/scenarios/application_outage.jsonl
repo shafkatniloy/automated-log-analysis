@@ -1,0 +1,8 @@
+{"timestamp":"2026-11-01T16:00:00Z","level":"INFO","service":"gateway","event":"request_completed","message":"GET /api/v1/orders 200 OK","status_code":200,"duration_ms":45}
+{"timestamp":"2026-11-01T16:01:10Z","level":"ERROR","service":"gateway","event":"http_5xx","message":"POST /api/v1/checkout 503 Service Unavailable: upstream timeout","status_code":503,"duration_ms":5002,"request_id":"req-out-1"}
+{"timestamp":"2026-11-01T16:01:25Z","level":"ERROR","service":"gateway","event":"http_5xx","message":"POST /api/v1/checkout 503 Service Unavailable: upstream connection reset","status_code":503,"duration_ms":3120,"request_id":"req-out-2"}
+{"timestamp":"2026-11-01T16:01:40Z","level":"ERROR","service":"gateway","event":"http_5xx","message":"POST /api/v1/checkout 502 Bad Gateway: connection refused","status_code":502,"duration_ms":120,"request_id":"req-out-3"}
+{"timestamp":"2026-11-01T16:02:00Z","level":"ERROR","service":"gateway","event":"http_5xx","message":"GET /api/v1/cart 500 Internal Server Error: unhandled exception in downstream service","status_code":500,"duration_ms":840,"request_id":"req-out-4"}
+{"timestamp":"2026-11-01T16:02:15Z","level":"ERROR","service":"gateway","event":"http_5xx","message":"POST /api/v1/checkout 503 Service Unavailable","status_code":503,"duration_ms":5001,"request_id":"req-out-5"}
+{"timestamp":"2026-11-01T16:02:30Z","level":"ERROR","service":"gateway","event":"http_5xx","message":"POST /api/v1/checkout 503 Service Unavailable","status_code":503,"duration_ms":5000,"request_id":"req-out-6"}
+{"timestamp":"2026-11-01T16:02:45Z","level":"CRITICAL","service":"gateway","event":"service_failure","message":"Health check failed for order-service cluster: 0 of 4 replicas healthy"}

@@ -1,0 +1,8 @@
+2026-11-01T09:10:01.123456+00:00 srv-app-01 sshd[24102]: Failed password for invalid user admin from 192.0.2.15 port 45212 ssh2
+2026-11-01T09:10:04.234567+00:00 srv-app-01 sshd[24104]: Failed password for invalid user admin from 192.0.2.15 port 45214 ssh2
+2026-11-01T09:10:07.345678+00:00 srv-app-01 sshd[24106]: Failed password for invalid user root from 192.0.2.15 port 45216 ssh2
+2026-11-01T09:10:10.456789+00:00 srv-app-01 sshd[24108]: Failed password for invalid user test from 192.0.2.15 port 45218 ssh2
+2026-11-01T09:10:14.567890+00:00 srv-app-01 sshd[24110]: Failed password for invalid user guest from 192.0.2.15 port 45220 ssh2
+2026-11-01T09:10:18.678901+00:00 srv-app-01 sshd[24112]: Failed password for invalid user deploy from 192.0.2.15 port 45222 ssh2
+2026-11-01T09:12:00.000000+00:00 srv-app-01 sshd[24150]: Accepted publickey for opsuser from 192.0.2.100 port 51230 ssh2
+2026-11-01T09:12:05.100000+00:00 srv-app-01 sudo: opsuser : TTY=pts/0 ; PWD=/home/opsuser ; USER=root ; COMMAND=/usr/bin/systemctl status

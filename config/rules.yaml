@@ -1,0 +1,67 @@
+# Log Analyzer Detection Rules Configuration
+analysis:
+  default_window_minutes: 5
+
+rules:
+  - id: APP-001
+    title: "Repeated Unhandled Exceptions"
+    event_type: "unhandled_exception"
+    pattern: "(?i)(unhandled exception|traceback|panic:)"
+    threshold: 3
+    window_minutes: 5
+    severity: "HIGH"
+    recommended_action: "Inspect stack trace in logs, identify failing code path, and verify service stability."
+
+  - id: DB-001
+    title: "Database Connection Failure Spike"
+    event_type: "database_connection_failed"
+    pattern: "(?i)(database connection failed|could not connect to database|connection timeout|connection pool exhausted)"
+    threshold: 3
+    window_minutes: 5
+    severity: "CRITICAL"
+    recommended_action: "Verify database service status with systemctl status, check listening ports with ss -lntp, inspect connection pool capacity, and verify network connectivity."
+
+  - id: AUTH-001
+    title: "Excessive Failed Authentication Attempts"
+    event_type: "login_failed"
+    pattern: "(?i)(failed password|authentication attempt failed|invalid credentials|login failed)"
+    threshold: 5
+    window_minutes: 10
+    severity: "MEDIUM"
+    recommended_action: "Check source IPs for brute-force attacks or verify whether client credentials or API tokens expired."
+
+  - id: HTTP-001
+    title: "Elevated HTTP 5xx Server Errors"
+    event_type: "http_5xx"
+    pattern: "(?i)(status_code[\"': ]+50[0-9]|internal server error|bad gateway|service unavailable)"
+    threshold: 5
+    window_minutes: 5
+    severity: "HIGH"
+    recommended_action: "Check upstream service health, recent deployment artifacts, and reverse proxy/gateway logs."
+
+  - id: LAT-001
+    title: "High Latency Warning Threshold Exceeded"
+    event_type: "latency_warning"
+    pattern: "(?i)(response time above threshold|request took too long|slow query)"
+    threshold: 5
+    window_minutes: 5
+    severity: "MEDIUM"
+    recommended_action: "Inspect database query execution plans, thread saturation, and external dependency latency."
+
+  - id: DISK-001
+    title: "Disk Space Exhaustion Warning"
+    event_type: "disk_warning"
+    pattern: "(?i)(disk usage above|no space left on device|disk space warning)"
+    threshold: 1
+    window_minutes: 5
+    severity: "HIGH"
+    recommended_action: "Check df -h and du -sh to identify overflowing partitions, log directories, or temp files."
+
+  - id: SERVICE-001
+    title: "Service Failure or Health Check Failure"
+    event_type: "service_failure"
+    pattern: "(?i)(service stopped|health check failed|exited with error|failed with result 'exit-code')"
+    threshold: 1
+    window_minutes: 5
+    severity: "CRITICAL"
+    recommended_action: "Check systemd status with systemctl status <service>, review journalctl -u <service> -n 100, and restart if safe."

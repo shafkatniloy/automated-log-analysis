@@ -1,0 +1,8 @@
+{"timestamp":"2026-11-01T15:00:10Z","level":"INFO","service":"auth-service","event":"login_success","message":"User alice successfully authenticated","user_id":"alice","source_ip":"198.51.100.22"}
+{"timestamp":"2026-11-01T15:01:05Z","level":"WARNING","service":"auth-service","event":"login_failed","message":"Authentication attempt failed: invalid password for admin","user_id":"admin","source_ip":"198.51.100.99"}
+{"timestamp":"2026-11-01T15:01:40Z","level":"WARNING","service":"auth-service","event":"login_failed","message":"Authentication attempt failed: invalid password for admin","user_id":"admin","source_ip":"198.51.100.99"}
+{"timestamp":"2026-11-01T15:02:15Z","level":"WARNING","service":"auth-service","event":"login_failed","message":"Authentication attempt failed: invalid password for admin","user_id":"admin","source_ip":"198.51.100.99"}
+{"timestamp":"2026-11-01T15:02:50Z","level":"WARNING","service":"auth-service","event":"login_failed","message":"Authentication attempt failed: invalid password for root","user_id":"root","source_ip":"198.51.100.99"}
+{"timestamp":"2026-11-01T15:03:20Z","level":"WARNING","service":"auth-service","event":"login_failed","message":"Authentication attempt failed: invalid password for supervisor","user_id":"supervisor","source_ip":"198.51.100.99"}
+{"timestamp":"2026-11-01T15:03:55Z","level":"WARNING","service":"auth-service","event":"login_failed","message":"Authentication attempt failed: account locked for admin","user_id":"admin","source_ip":"198.51.100.99"}
+{"timestamp":"2026-11-01T15:05:00Z","level":"INFO","service":"auth-service","event":"login_success","message":"User bob successfully authenticated","user_id":"bob","source_ip":"198.51.100.45"}
