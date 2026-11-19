@@ -1,0 +1,15 @@
+[Unit]
+Description=Automated Log Analysis & Operational Incident Detection
+After=network.target
+
+[Service]
+Type=oneshot
+User=safkatniloy
+WorkingDirectory=/home/safkatniloy/Documents/pilot/automated log analysis
+Environment=PYTHONPATH=src
+ExecStart=/home/safkatniloy/Documents/pilot/automated log analysis/.venv/bin/python3 -m log_analyzer -i ./sample-logs -o ./reports --alert-file ./reports/alerts.log --alert-min-severity CRITICAL
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
